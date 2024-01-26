@@ -6,6 +6,7 @@ resources:
 - resources/cluster-secret-store.yaml
 - resources/gcp/service-account.yaml
 - resources/gcp/workload-identity.yaml
+- resources/gcp/role-binding.yaml
 
 helmCharts:
 - name: external-secrets
