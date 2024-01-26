@@ -11,3 +11,6 @@ resources:
 - resources/projects.yaml
 - resources/application-sets.yaml
 - resources/gcp/argocd-service-account.yaml
+
+patchesStrategicMerge:
+- overlays/argocd-configmap.yaml
