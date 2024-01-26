@@ -6,6 +6,6 @@ spec:
   member: serviceAccount:external-secrets@gke-sandbox-412119.iam.gserviceaccount.com
   role: roles/secretmanager.secretAccessor
   resourceRef:
-    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1  
     kind: Project
-    name: gke-sandbox-412119  # Replace with your project ID
+    external: projects/gke-sandbox-412119
