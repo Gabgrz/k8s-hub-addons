@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cluster-local
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/Gabgrz/hub-cluster-addons.git
+      revision: HEAD
+      directories:
+      - path: '*'
+  template:
+    metadata:
+      name: '{{path[0]}}'
+      labels:
+        type: addon
+    spec:
+      project: cluster-local
+      source:
+        repoURL: https://github.com/Gabgrz/hub-cluster-addons.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{path}}'
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+  syncPolicy:
+    # https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Controlling-Resource-Modification/
+    preserveResourcesOnDeletion: true
