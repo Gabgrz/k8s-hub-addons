@@ -10,6 +10,7 @@ resources:
 - resources/namespace.yaml
 - resources/projects.yaml
 - resources/application-sets.yaml
+- resources/github-authentication.yaml
 - resources/gcp/argocd-service-account.yaml
 - resources/gcp/github-credentials-gabgrz.yaml
 
