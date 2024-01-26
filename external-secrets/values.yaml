@@ -1,0 +1,15 @@
+## Values Reference
+# https://github.com/external-secrets/external-secrets/tree/v0.9.4/deploy/charts/external-secrets
+
+serviceAccount:
+  name: external-secrets
+  annotations:
+    iam.gke.io/gcp-service-account: external-secrets@gke-sandbox-412119.iam.gserviceaccount.com
+webhook:
+  serviceAccount:
+    create: false
+    name: external-secrets
+certController:
+  serviceAccount:
+    create: false
+    name: external-secrets
