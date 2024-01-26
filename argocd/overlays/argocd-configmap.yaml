@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+data:
+  # Web Shell
+  exec.enabled: 'true'
+  exec.shells: '/bin/bash,/bin/sh'
+  
+  # ArgoCD tracking
+  # https://argo-cd.readthedocs.io/en/stable/user-guide/resource_tracking/
+  application.resourceTrackingMethod: annotation
+
+  kustomize.buildOptions: --enable-helm
+  
