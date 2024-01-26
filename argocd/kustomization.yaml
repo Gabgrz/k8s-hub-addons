@@ -10,3 +10,4 @@ resources:
 - resources/namespace.yaml
 - resources/projects.yaml
 - resources/application-sets.yaml
+- resources/gcp/argocd-service-account.yaml
