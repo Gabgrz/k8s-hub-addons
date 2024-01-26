@@ -1,0 +1,21 @@
+# GitHub account: https://github.com/Gabgrz
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: github-credentials-gabgrz
+spec:
+  refreshInterval: 15m
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: css-gke-sandbox-412119
+  target:
+    name: github-credentials-gabgrz
+    creationPolicy: Owner
+    template:
+      metadata:
+        labels:
+          argocd.argoproj.io/secret-type: repo-creds
+  dataFrom:
+  - extract:
+      # GCPSM name
+      key: github-credentials-gabgrz
