@@ -1,2 +1,2 @@
 # hub-cluster-addons
-Addons for Hub cluster
+Addons for Hub cluster.
