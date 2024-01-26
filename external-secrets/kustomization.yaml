@@ -14,4 +14,5 @@ helmCharts:
   namespace: external-secrets
   releaseName: eso
   version: 0.9.4
-  repo: oci://artifacthub.io/packages/helm/external-secrets-operator/external-secrets
+  repo: https://charts.external-secrets.io
+
