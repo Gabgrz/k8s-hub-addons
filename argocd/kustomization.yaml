@@ -8,4 +8,5 @@ bases:
 
 resources:
 - resources/namespace.yaml
+- resources/projects.yaml
 - resources/application-sets.yaml
